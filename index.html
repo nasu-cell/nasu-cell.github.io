@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゲームプログラマー ポートフォリオ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Game Programmer Portfolio</h1>
+        <p>ゲームプログラマーを目指す学生の作品集</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>自己紹介</h2>
+            <p>
+                UnityとC#を用いたゲーム開発に取り組んでいる学生です。
+                個人制作とチーム制作の両方を経験し、
+                ゲームの企画・実装から、遊びやすさを意識したUI制作まで
+                幅広く取り組んでいます。
+            </p>
+            <p>
+                このポートフォリオでは、これまでに制作したゲームと、
+                実装した機能や開発で工夫した点を紹介します。
+            </p>
+        </section>
+
+        <section id="works">
+            <h2>制作作品</h2>
+
+            <div class="work-list">
+                <article class="work-card">
+                    <h3>3D Infinite Runner</h3>
+                    <p>個人制作｜3Dランゲーム</p>
+                    <button class="detail-button" onclick="openModal('runner-modal')"> 詳細を見る
+                    </button>
+                </article>
+
+                <article class="work-card">
+                    <h3>Smash Prototype</h3>
+                    <p>個人制作｜オンライン対戦アクション</p>
+                    <button class="detail-button" onclick="openModal('smash-modal')">
+                        詳細を見る
+                    </button>
+                </article>
+
+                <article class="work-card">
+                    <h3>3Dアスレチックゲーム</h3>
+                    <p>個人制作｜3Dアクション</p>
+                    <button class="detail-button" onclick="openModal('athletic-modal')">
+                        詳細を見る
+                    </button>
+                </article>
+
+                <article class="work-card">
+                    <h3>たいらげろ！かわずさん！</h3>
+                    <p>3人チーム制作｜ゲームジャム作品</p>
+                    <button class="detail-button" onclick="openModal('kawazu-modal')">
+                        詳細を見る
+                    </button>
+                </article>
+
+                <article class="work-card">
+                    <h3>ルーズマザー</h3>
+                    <p>2人チーム制作</p>
+                    <button class="detail-button" onclick="openModal('rues-mother-modal')">
+                        詳細を見る
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>スキル</h2>
+
+            <h3>プログラミング言語</h3>
+            <ul>
+                <li>C#（約2年）</li>
+                <li>C（約1年）</li>
+                <li>C++（約半年）</li>
+                <li>Python（約1年）</li>
+                <li>Java（約半年）</li>
+            </ul>
+
+            <h3>ゲーム開発</h3>
+            <ul>
+                <li>Unity</li>
+                <li>Photon Fusion 2</li>
+            </ul>
+
+            <h3>バージョン管理</h3>
+            <ul>
+                <li>Git</li>
+                <li>GitHub</li>
+            </ul>
+
+            <h3>エディタ・開発環境</h3>
+            <ul>
+                <li>Visual Studio</li>
+                <li>Visual Studio Code</li>
+            </ul>
+            <h3>資格</h3>
+            <ul>
+                <li>ITパスポート試験</li>
+                <li>基本情報技術者試験</li>
+            </ul>
+        </section>
+
+
+
+        <section>
+            <h2>リンク</h2>
+            <p>
+                GitHub：
+                <a href="https://github.com/nasu-cell" target="_blank" rel="noopener noreferrer">
+                    https://github.com/nasu-cell
+                </a>
+            </p>
+            <p>
+                UnityRoom：
+                <a href="https://unityroom.com/users/nasu-cell" target="_blank" rel="noopener noreferrer">
+                    https://unityroom.com/users/nasu-cell
+                </a>
+            </p>
+        </section>
+
+    </main>
+
+
+    <!-- 3D Infinite Runnerの詳細モーダル -->
+    <div id="runner-modal" class="modal" onclick="closeModal('runner-modal')">
+
+        <div class="modal-content" onclick="event.stopPropagation()">
+
+            <button class="close-button" onclick="closeModal('runner-modal')" aria-label="閉じる">
+                ×
+            </button>
+
+            <h2>3D Infinite Runner</h2>
+
+            <h3>作品概要</h3>
+            <p>
+                UnityとC#を用いて制作した3Dランゲームです。
+                障害物を避けながら進み、スコアの更新を目指します。
+            </p>
+
+            <h3>基本情報</h3>
+            <ul>
+                <li>制作形態：個人制作</li>
+                <li>使用技術：Unity / C#</li>
+                <li>ジャンル：3Dランゲーム</li>
+            </ul>
+
+            <h3>実装した機能</h3>
+            <ul>
+                <li>プレイヤーの移動・ジャンプ</li>
+                <li>時間経過に応じたゲーム速度の上昇</li>
+                <li>スコアとアイテムの管理</li>
+                <li>最高スコアの表示</li>
+                <li>ゲーム終了後のリスタート</li>
+            </ul>
+
+            <h3>プレイ動画・スクリーンショット</h3>
+            <p>ここにゲーム画面やプレイ動画を掲載します。</p>
+
+            <h3>ソースコード</h3>
+            <p>ここにGitHubリポジトリへのリンクを掲載します。</p>
+
+        </div>
+    </div>
+
+    <!-- Smash Prototypeの詳細モーダル -->
+    <div id="smash-modal" class="modal" onclick="closeModal('smash-modal')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-button" onclick="closeModal('smash-modal')" aria-label="閉じる">×</button>
+
+            <h2>Smash Prototype</h2>
+
+            <h3>作品概要</h3>
+            <p>Photon Fusion 2を使用した、オンライン対戦型の2Dアクションゲームです。</p>
+
+            <h3>基本情報</h3>
+            <ul>
+                <li>制作形態：個人制作</li>
+                <li>使用技術：Unity / C# / Photon Fusion 2</li>
+                <li>ジャンル：オンライン対戦アクション</li>
+            </ul>
+
+            <h3>実装した機能・工夫</h3>
+            <p>ここに実装した機能や技術的な工夫を記載します。</p>
+
+            <h3>プレイ動画・スクリーンショット</h3>
+            <p>ここにゲーム画面やプレイ動画を掲載します。</p>
+
+            <h3>ソースコード</h3>
+            <p>ここにGitHubリポジトリへのリンクを掲載します。</p>
+        </div>
+    </div>
+
+    <!-- 3D Athleticの詳細モーダル -->
+    <div id="athletic-modal" class="modal" onclick="closeModal('athletic-modal')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-button" onclick="closeModal('athletic-modal')" aria-label="閉じる">×</button>
+
+            <h2>3Dアスレチックゲーム</h2>
+
+            <h3>作品概要</h3>
+            <p>UnityとC#を用いて制作した3Dアクションゲームです。</p>
+
+            <h3>基本情報</h3>
+            <ul>
+                <li>制作形態：個人制作</li>
+                <li>使用技術：Unity / C#</li>
+                <li>ジャンル：3Dアクション</li>
+            </ul>
+
+            <h3>実装した機能・工夫</h3>
+            <p>ここに実装した機能や技術的な工夫を記載します。</p>
+
+            <h3>プレイ動画・スクリーンショット</h3>
+            <p>ここにゲーム画面やプレイ動画を掲載します。</p>
+
+            <h3>ソースコード</h3>
+            <p>ここにGitHubリポジトリへのリンクを掲載します。</p>
+        </div>
+    </div>
+
+    <!-- たいらげろ！かわずさん！の詳細モーダル -->
+    <div id="kawazu-modal" class="modal" onclick="closeModal('kawazu-modal')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-button" onclick="closeModal('kawazu-modal')" aria-label="閉じる">×</button>
+
+            <h2>たいらげろ！かわずさん！</h2>
+
+            <h3>作品概要</h3>
+            <p>3人チームで制作したゲームです。カエルが舌を伸ばしてハエを捕まえるゲームです。</p>
+
+            <h3>基本情報</h3>
+            <ul>
+                <li>制作形態：3人チーム制作</li>
+                <li>使用技術：Unity / C#（詳細は後で確認）</li>
+            </ul>
+
+            <h3>自分の担当箇所</h3>
+            <p>ここに自分が担当した機能や工夫を記載します。</p>
+
+            <h3>プレイ動画・スクリーンショット</h3>
+            <p>ここにゲーム画面やプレイ動画を掲載します。</p>
+
+            <h3>ソースコード・公開ページ</h3>
+            <p>ここに関連リンクを掲載します。</p>
+        </div>
+    </div>
+
+    <!-- ルーズマザーの詳細モーダル -->
+    <div id="rues-mother-modal" class="modal" onclick="closeModal('rues-mother-modal')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-button" onclick="closeModal('rues-mother-modal')" aria-label="閉じる">×</button>
+
+            <h2>ルーズマザー</h2>
+
+            <h3>作品概要</h3>
+            <p>2人チームで制作しているゲームです。</p>
+
+            <h3>基本情報</h3>
+            <ul>
+                <li>制作形態：2人チーム制作</li>
+            </ul>
+
+            <h3>自分の担当箇所</h3>
+            <p>ここに武器クラフトや装備UIなど、自分が担当した機能を記載します。</p>
+
+            <h3>プレイ動画・スクリーンショット</h3>
+            <p>ここにゲーム画面やプレイ動画を掲載します。</p>
+
+            <h3>ソースコード・公開ページ</h3>
+            <p>ここに関連リンクを掲載します。</p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
