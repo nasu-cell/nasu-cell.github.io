@@ -15,7 +15,6 @@
     </header>
 
     <main>
-
         <section>
             <h2>自己紹介</h2>
             <p>
@@ -23,6 +22,12 @@
                 個人制作とチーム制作の両方を経験し、
                 ゲームの企画・実装から、遊びやすさを意識したUI制作まで
                 幅広く取り組んでいます。
+            </p>
+            <p>
+                個人制作では、プレイヤーの操作やゲーム進行の管理、
+                UI・演出など、ゲームを構成するさまざまな機能を実装してきました。
+                チーム制作では、自分の担当機能を実装するだけでなく、
+                GitHubを利用した共同開発にも取り組んでいます。
             </p>
             <p>
                 このポートフォリオでは、これまでに制作したゲームと、
@@ -34,15 +39,19 @@
             <h2>制作作品</h2>
 
             <div class="work-list">
+
                 <article class="work-card">
                     <h3>3D Infinite Runner</h3>
+                    <img src="Assets/3drun-title.png" alt="3D Infinite Runnerのタイトル画像" class="game-thumbnail">
                     <p>個人制作｜3Dランゲーム</p>
-                    <button class="detail-button" onclick="openModal('runner-modal')"> 詳細を見る
+                    <button class="detail-button" onclick="openModal('runner-modal')">
+                        詳細を見る
                     </button>
                 </article>
 
                 <article class="work-card">
                     <h3>Smash Prototype</h3>
+                    <img src="Assets/smash-title.png" alt="Smash Prototypeのタイトル画像" class="game-thumbnail">
                     <p>個人制作｜オンライン対戦アクション</p>
                     <button class="detail-button" onclick="openModal('smash-modal')">
                         詳細を見る
@@ -51,6 +60,7 @@
 
                 <article class="work-card">
                     <h3>3Dアスレチックゲーム</h3>
+                    <img src="Assets/3dathletic-title.png" alt="3Dアスレチックゲームのタイトル画像" class="game-thumbnail">
                     <p>個人制作｜3Dアクション</p>
                     <button class="detail-button" onclick="openModal('athletic-modal')">
                         詳細を見る
@@ -59,6 +69,7 @@
 
                 <article class="work-card">
                     <h3>たいらげろ！かわずさん！</h3>
+                    <img src="Assets/kawazu-title.png" alt="たいらげろ！かわずさん！のタイトル画像" class="game-thumbnail">
                     <p>3人チーム制作｜ゲームジャム作品</p>
                     <button class="detail-button" onclick="openModal('kawazu-modal')">
                         詳細を見る
@@ -67,11 +78,13 @@
 
                 <article class="work-card">
                     <h3>ルーズマザー</h3>
+                    <img src="Assets/rues-title.png" alt="ルーズマザーのタイトル画像" class="game-thumbnail">
                     <p>2人チーム制作</p>
                     <button class="detail-button" onclick="openModal('rues-mother-modal')">
                         詳細を見る
                     </button>
                 </article>
+
             </div>
         </section>
 
@@ -80,11 +93,11 @@
 
             <h3>プログラミング言語</h3>
             <ul>
-                <li>C#（約2年）</li>
-                <li>C（約1年）</li>
-                <li>C++（約半年）</li>
-                <li>Python（約1年）</li>
-                <li>Java（約半年）</li>
+                <li>C#</li>
+                <li>C</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>Java</li>
             </ul>
 
             <h3>ゲーム開発</h3>
@@ -99,19 +112,18 @@
                 <li>GitHub</li>
             </ul>
 
-            <h3>エディタ・開発環境</h3>
+            <h3>開発環境</h3>
             <ul>
                 <li>Visual Studio</li>
                 <li>Visual Studio Code</li>
             </ul>
+
             <h3>資格</h3>
             <ul>
                 <li>ITパスポート試験</li>
                 <li>基本情報技術者試験</li>
             </ul>
         </section>
-
-
 
         <section>
             <h2>リンク</h2>
@@ -128,25 +140,34 @@
                 </a>
             </p>
         </section>
-
     </main>
 
-
-    <!-- 3D Infinite Runnerの詳細モーダル -->
+    <!-- 3D Infinite Runner -->
     <div id="runner-modal" class="modal" onclick="closeModal('runner-modal')">
-
         <div class="modal-content" onclick="event.stopPropagation()">
 
-            <button class="close-button" onclick="closeModal('runner-modal')" aria-label="閉じる">
-                ×
-            </button>
+            <button class="close-button" onclick="closeModal('runner-modal')" aria-label="閉じる">×</button>
 
             <h2>3D Infinite Runner</h2>
 
+            <div class="slider">
+                <button class="slider-button" onclick="changeSlide('runner', -1)" aria-label="前の画像">❮</button>
+
+                <div class="slider-window">
+                    <img id="runner-slide" src="Assets/3drun-title.png" alt="3D Infinite Runnerのプレイ画面"
+                        class="gallery-image">
+                </div>
+
+                <button class="slider-button" onclick="changeSlide('runner', 1)" aria-label="次の画像">❯</button>
+            </div>
+
+            <p id="runner-slide-counter" class="slide-counter">1 / 2</p>
+
             <h3>作品概要</h3>
             <p>
-                UnityとC#を用いて制作した3Dランゲームです。
-                障害物を避けながら進み、スコアの更新を目指します。
+                UnityとC#を用いて制作した、障害物を避けながら進む
+                3Dランゲームです。プレイヤーはジャンプなどの操作で障害物を回避し、
+                スコアの更新を目指します。
             </p>
 
             <h3>基本情報</h3>
@@ -156,61 +177,116 @@
                 <li>ジャンル：3Dランゲーム</li>
             </ul>
 
-            <h3>実装した機能</h3>
+            <h3>実装した機能・工夫</h3>
             <ul>
-                <li>プレイヤーの移動・ジャンプ</li>
+                <li>プレイヤーの移動・ジャンプ操作</li>
                 <li>時間経過に応じたゲーム速度の上昇</li>
                 <li>スコアとアイテムの管理</li>
-                <li>最高スコアの表示</li>
+                <li>現在のスコアと最高スコアの表示</li>
                 <li>ゲーム終了後のリスタート</li>
             </ul>
-
-            <h3>プレイ動画・スクリーンショット</h3>
-            <p>ここにゲーム画面やプレイ動画を掲載します。</p>
+            <p>
+                ゲームの開始から終了までの流れを実装し、
+                スコア表示やリスタート機能によって、
+                繰り返しプレイできる構成にしました。
+            </p>
 
             <h3>ソースコード</h3>
-            <p>ここにGitHubリポジトリへのリンクを掲載します。</p>
-
+            <p>
+                GitHub：
+                <a href="https://github.com/nasu-cell/3DRunGame" target="_blank" rel="noopener noreferrer">
+                    https://github.com/nasu-cell/3DRunGame
+                </a>
+            </p>
         </div>
     </div>
 
-    <!-- Smash Prototypeの詳細モーダル -->
+    <!-- Smash Prototype -->
     <div id="smash-modal" class="modal" onclick="closeModal('smash-modal')">
         <div class="modal-content" onclick="event.stopPropagation()">
+
             <button class="close-button" onclick="closeModal('smash-modal')" aria-label="閉じる">×</button>
 
             <h2>Smash Prototype</h2>
 
+            <div class="slider">
+                <button class="slider-button" onclick="changeSlide('smash', -1)" aria-label="前の画像">❮</button>
+
+                <div class="slider-window">
+                    <img id="smash-slide" src="Assets/smash-title.png" alt="Smash Prototypeのゲーム画面"
+                        class="gallery-image">
+                </div>
+
+                <button class="slider-button" onclick="changeSlide('smash', 1)" aria-label="次の画像">❯</button>
+            </div>
+
+            <p id="smash-slide-counter" class="slide-counter">1 / 3</p>
+
             <h3>作品概要</h3>
-            <p>Photon Fusion 2を使用した、オンライン対戦型の2Dアクションゲームです。</p>
+            <p>
+                『大乱闘スマッシュブラザーズ』のような対戦形式を参考にした、
+                オンライン対戦型の2Dアクションゲームです。
+                UnityとPhoton Fusion 2を用いて、ネットワークを介した
+                プレイヤー同士の対戦を実現することを目指して制作しました。
+            </p>
 
             <h3>基本情報</h3>
             <ul>
                 <li>制作形態：個人制作</li>
                 <li>使用技術：Unity / C# / Photon Fusion 2</li>
-                <li>ジャンル：オンライン対戦アクション</li>
+                <li>ジャンル：オンライン対戦型2Dアクション</li>
             </ul>
 
-            <h3>実装した機能・工夫</h3>
-            <p>ここに実装した機能や技術的な工夫を記載します。</p>
-
-            <h3>プレイ動画・スクリーンショット</h3>
-            <p>ここにゲーム画面やプレイ動画を掲載します。</p>
+            <h3>実装・技術的な取り組み</h3>
+            <ul>
+                <li>2Dアクションゲームのプレイヤー操作</li>
+                <li>対戦ゲームの基本となるゲーム進行の実装</li>
+                <li>Photon Fusion 2を利用したオンライン対戦機能の実装</li>
+            </ul>
+            <p>
+                通常のシングルプレイ用ゲームとは異なり、
+                ネットワークを介してプレイヤー同士が対戦する構成に取り組みました。
+                ゲームの操作や進行をオンライン対戦に対応させることを通じて、
+                ネットワークゲーム開発への理解を深めています。
+            </p>
 
             <h3>ソースコード</h3>
-            <p>ここにGitHubリポジトリへのリンクを掲載します。</p>
+            <p>
+                GitHub：
+                <a href="https://github.com/nasu-cell/Smash-Prototype" target="_blank" rel="noopener noreferrer">
+                    https://github.com/nasu-cell/Smash-Prototype
+                </a>
+            </p>
         </div>
     </div>
 
-    <!-- 3D Athleticの詳細モーダル -->
+    <!-- 3Dアスレチックゲーム -->
     <div id="athletic-modal" class="modal" onclick="closeModal('athletic-modal')">
         <div class="modal-content" onclick="event.stopPropagation()">
+
             <button class="close-button" onclick="closeModal('athletic-modal')" aria-label="閉じる">×</button>
 
             <h2>3Dアスレチックゲーム</h2>
 
+            <div class="slider">
+                <button class="slider-button" onclick="changeSlide('athletic', -1)" aria-label="前の画像">❮</button>
+
+                <div class="slider-window">
+                    <img id="athletic-slide" src="Assets/3dathletic-title.png" alt="3Dアスレチックゲームの画面"
+                        class="gallery-image">
+                </div>
+
+                <button class="slider-button" onclick="changeSlide('athletic', 1)" aria-label="次の画像">❯</button>
+            </div>
+
+            <p id="athletic-slide-counter" class="slide-counter">1 / 3</p>
+
             <h3>作品概要</h3>
-            <p>UnityとC#を用いて制作した3Dアクションゲームです。</p>
+            <p>
+                UnityとC#を用いて制作した3Dアスレチックゲームです。
+                プレイヤーを操作してさまざまな障害物や足場を乗り越え、
+                ゴールを目指します。
+            </p>
 
             <h3>基本情報</h3>
             <ul>
@@ -220,66 +296,146 @@
             </ul>
 
             <h3>実装した機能・工夫</h3>
-            <p>ここに実装した機能や技術的な工夫を記載します。</p>
-
-            <h3>プレイ動画・スクリーンショット</h3>
-            <p>ここにゲーム画面やプレイ動画を掲載します。</p>
+            <ul>
+                <li>プレイヤーの移動・操作処理</li>
+                <li>残機を利用したゲームオーバー・復帰処理</li>
+                <li>一定のタイミングで状態が切り替わる足場</li>
+                <li>プレイヤーの進行に関わる移動床</li>
+                <li>ゲーム開始・再開時の状態管理</li>
+            </ul>
+            <p>
+                足場の状態変化や移動床など、プレイヤーの進行に影響する
+                ギミックを実装しました。また、残機の減少や復帰処理を管理し、
+                ゲームの進行状況に応じてギミックの動作を制御しています。
+            </p>
 
             <h3>ソースコード</h3>
-            <p>ここにGitHubリポジトリへのリンクを掲載します。</p>
+            <p>
+                GitHub：
+                <a href="https://github.com/nasu-cell/3D-Athletic-Game" target="_blank" rel="noopener noreferrer">
+                    https://github.com/nasu-cell/3D-Athletic-Game
+                </a>
+            </p>
         </div>
     </div>
 
-    <!-- たいらげろ！かわずさん！の詳細モーダル -->
+    <!-- たいらげろ！かわずさん！ -->
     <div id="kawazu-modal" class="modal" onclick="closeModal('kawazu-modal')">
         <div class="modal-content" onclick="event.stopPropagation()">
+
             <button class="close-button" onclick="closeModal('kawazu-modal')" aria-label="閉じる">×</button>
 
             <h2>たいらげろ！かわずさん！</h2>
 
+            <div class="slider">
+                <button class="slider-button" onclick="changeSlide('kawazu', -1)" aria-label="前の画像">❮</button>
+
+                <div class="slider-window">
+                    <img id="kawazu-slide" src="Assets/kawazu-title.png" alt="たいらげろ！かわずさん！のゲーム画面" class="gallery-image">
+                </div>
+
+                <button class="slider-button" onclick="changeSlide('kawazu', 1)" aria-label="次の画像">❯</button>
+            </div>
+
+            <p id="kawazu-slide-counter" class="slide-counter">1 / 4</p>
+
             <h3>作品概要</h3>
-            <p>3人チームで制作したゲームです。カエルが舌を伸ばしてハエを捕まえるゲームです。</p>
+            <p>
+                サイバーエージェントのインターンシップで制作した、
+                3人チームによるゲームです。
+                カエルを操作し、舌を伸ばしてハエを捕まえることを目指します。
+            </p>
 
             <h3>基本情報</h3>
             <ul>
                 <li>制作形態：3人チーム制作</li>
-                <li>使用技術：Unity / C#（詳細は後で確認）</li>
+                <li>使用技術：Unity / C#</li>
+                <li>ジャンル：アクションゲーム</li>
             </ul>
 
             <h3>自分の担当箇所</h3>
-            <p>ここに自分が担当した機能や工夫を記載します。</p>
+            <p>
+                主にハエやハチなどの敵キャラクターの生成と移動処理を担当しました。
+                ゲーム内でキャラクターが出現し、移動するための処理を実装し、
+                ゲームプレイを構成する機能の一部を担いました。
+            </p>
 
-            <h3>プレイ動画・スクリーンショット</h3>
-            <p>ここにゲーム画面やプレイ動画を掲載します。</p>
+            <h3>チーム制作での取り組み</h3>
+            <p>
+                3人で役割を分担し、各自の担当機能を組み合わせて
+                ひとつのゲームを制作しました。
+                自分の担当範囲の実装を通じて、個別の機能を
+                ゲーム全体の動作につなげることを経験しました。
+            </p>
 
-            <h3>ソースコード・公開ページ</h3>
-            <p>ここに関連リンクを掲載します。</p>
+            <h3>ソースコード</h3>
+            <p>
+                GitHub：
+                <a href="https://github.com/nasu-cell/kawazusan" target="_blank" rel="noopener noreferrer">
+                    https://github.com/nasu-cell/kawazusan
+                </a>
+            </p>
         </div>
     </div>
 
-    <!-- ルーズマザーの詳細モーダル -->
+    <!-- ルーズマザー -->
     <div id="rues-mother-modal" class="modal" onclick="closeModal('rues-mother-modal')">
         <div class="modal-content" onclick="event.stopPropagation()">
+
             <button class="close-button" onclick="closeModal('rues-mother-modal')" aria-label="閉じる">×</button>
 
             <h2>ルーズマザー</h2>
 
+            <div class="slider">
+                <button class="slider-button" onclick="changeSlide('rues', -1)" aria-label="前の画像">❮</button>
+
+                <div class="slider-window">
+                    <img id="rues-slide" src="Assets/rues-title.png" alt="ルーズマザーのゲーム画面" class="gallery-image">
+                </div>
+
+                <button class="slider-button" onclick="changeSlide('rues', 1)" aria-label="次の画像">❯</button>
+            </div>
+
+            <p id="rues-slide-counter" class="slide-counter">1 / 5</p>
+
             <h3>作品概要</h3>
-            <p>2人チームで制作しているゲームです。</p>
+            <p>
+                2人チームで制作しているゲームです。
+                ゲーム内で使用する武器のクラフトや装備の管理など、
+                プレイヤーが利用するUIの実装に取り組んでいます。
+            </p>
 
             <h3>基本情報</h3>
             <ul>
                 <li>制作形態：2人チーム制作</li>
+                <li>使用技術：Unity / C#</li>
+                <li>担当：UI・武器クラフト関連の実装</li>
             </ul>
 
             <h3>自分の担当箇所</h3>
-            <p>ここに武器クラフトや装備UIなど、自分が担当した機能を記載します。</p>
+            <p>
+                武器のクラフト画面や装備画面など、プレイヤーが武器を
+                作成・選択・装備するためのUIを担当しています。
+            </p>
+            <ul>
+                <li>武器のクラフト可否に応じた表示の切り替え</li>
+                <li>クラフト済み武器の状態表示</li>
+                <li>装備する武器を選択するためのUI</li>
+                <li>装備中の武器情報の表示</li>
+            </ul>
+            <p>
+                武器の状態に応じて表示を切り替え、
+                プレイヤーがクラフトや装備の状況を把握しやすいように
+                UIの構成と処理を実装しています。
+            </p>
 
-            <h3>プレイ動画・スクリーンショット</h3>
-            <p>ここにゲーム画面やプレイ動画を掲載します。</p>
-
-            <h3>ソースコード・公開ページ</h3>
-            <p>ここに関連リンクを掲載します。</p>
+            <h3>ソースコード</h3>
+            <p>
+                GitHub：
+                <a href="https://github.com/miyasin0422/RuesMother" target="_blank" rel="noopener noreferrer">
+                    https://github.com/miyasin0422/RuesMother
+                </a>
+            </p>
         </div>
     </div>
 
